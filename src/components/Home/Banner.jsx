@@ -11,7 +11,7 @@ const Banner = () => {
                 <source src="../../../resources/1105.mp4" type="video/mp4" />
             </video>
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-1">
-                <div className="relative mt-12 z-2 text-white text-3xl flex lg:flex-row flex-col gap-12 lg:gap-0 items-center justify-center h-full md:w-3/4 mx-auto font-bold p-4">
+                <div className="relative mt-12 z-2 text-white text-3xl flex lg:flex-row flex-col gap-12 lg:gap-0 items-center justify-center h-full md:w-[85vw] mx-auto font-bold p-4">
                     <div data-aos="fade-up" data-aos-duration='1500'>
                         <Button color="transparent" size='md' pill className="w-fit border mb-4">Experience</Button>
                         <h2 className="text-7xl lg:w-3/4 mb-12">Discover Bangladesh with GoLocal Tours</h2>
