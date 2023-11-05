@@ -1,0 +1,119 @@
+[
+    {
+        "serviceImage": "https://i.ibb.co/c2T2c3w/bangladesh-3535023-1280.jpg",
+        "serviceName": "Sundarbans Wildlife Safari",
+        "serviceDescription": "Explore the Sundarbans and its wildlife. A unique adventure!",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Wilderness Tours",
+        "serviceArea": "Sundarbans",
+        "servicePrice": 150
+    },
+    {
+        "serviceImage": "https://i.ibb.co/j6qYb5n/bangladesh-3673378-1280.jpg",
+        "serviceName": "Cox's Bazar Beach Retreat",
+        "serviceDescription": "Relax on Cox's Bazar beach. Sun, sand, and serenity.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Sandy Escapes",
+        "serviceArea": "Cox's Bazar",
+        "servicePrice": 90
+    },
+    {
+        "serviceImage": "https://i.ibb.co/YP6h49s/natural-2643896-1280.jpg",
+        "serviceName": "Chittagong Hill Tracts Trek",
+        "serviceDescription": "Thrilling trek through Chittagong Hill Tracts. Unforgettable adventure!",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Hill Explorers",
+        "serviceArea": "Chittagong Hill Tracts",
+        "servicePrice": 120
+    },
+    {
+        "serviceImage": "https://i.ibb.co/cxKFt8m/fort-aurangabad-2698844-1280.jpg",
+        "serviceName": "Sylhet Tea Garden Tour",
+        "serviceDescription": "Sip fresh tea in Sylhet's lush tea gardens. Scenic and relaxing.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Tea Tastings",
+        "serviceArea": "Sylhet",
+        "servicePrice": 70
+    },
+    {
+        "serviceImage": "https://i.ibb.co/d7XTsPf/sajek-4697901-1280.jpg",
+        "serviceName": "Dhaka Heritage Walk",
+        "serviceDescription": "Discover Dhaka's rich history and heritage. A cultural journey.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Heritage Tours",
+        "serviceArea": "Dhaka",
+        "servicePrice": 40
+    },
+    {
+        "serviceImage": "https://i.ibb.co/djRN9G7/sylhet-4296348-1280.jpg",
+        "serviceName": "Kuakata Sea View Tour",
+        "serviceDescription": "Breathtaking sea views in Kuakata. Relax and rejuvenate.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Seaside Explorers",
+        "serviceArea": "Kuakata",
+        "servicePrice": 85
+    },
+    {
+        "serviceImage": "https://i.ibb.co/sv0tvh3/inani-beach-2496530-1280.jpg",
+        "serviceName": "Rajshahi Silk City Experience",
+        "serviceDescription": "Immerse in Rajshahi's vibrant culture. Explore the Silk City!",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Silk Routes",
+        "serviceArea": "Rajshahi",
+        "servicePrice": 55
+    },
+    {
+        "serviceImage": "https://i.ibb.co/R3Ddr20/train-4998318-1280.jpg",
+        "serviceName": "Srimangal Bird Watching Tour",
+        "serviceDescription": "Observe birds in serene Srimangal. A paradise for bird enthusiasts.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Bird Enthusiasts",
+        "serviceArea": "Srimangal",
+        "servicePrice": 80
+    },
+    {
+        "serviceImage": "https://i.ibb.co/MRDkVkf/bangladesh-3539687-1280.jpg",
+        "serviceName": "Paharpur Buddhist Vihara Visit",
+        "serviceDescription": "Explore ancient Paharpur Buddhist Vihara. UNESCO World Heritage Site.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Buddhist Journeys",
+        "serviceArea": "Paharpur",
+        "servicePrice": 60
+    },
+    {
+        "serviceImage": "https://i.ibb.co/bLy9rT5/bangladesh-4690975-1280.jpg",
+        "serviceName": "Sundarbans Houseboat Expedition",
+        "serviceDescription": "Cruise Sundarbans on a comfortable houseboat. Wildlife adventures!",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "River Voyages",
+        "serviceArea": "Sundarbans",
+        "servicePrice": 190
+    },
+    {
+        "serviceImage": "https://i.ibb.co/Xz0vgQT/bangladesh-3543469-1280.jpg",
+        "serviceName": "Barisal Floating Market Tour",
+        "serviceDescription": "Experience Barisal floating market and local traditions. Unique adventure!",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Floating Markets",
+        "serviceArea": "Barisal",
+        "servicePrice": 50
+    },
+    {
+        "serviceImage": "https://i.ibb.co/gPz929x/natural-2643941-1280.jpg",
+        "serviceName": "Khulna Shipbreaking Yard Visit",
+        "serviceDescription": "Visit world's largest shipbreaking yard. Witness an industrial marvel.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "Shipyard Tours",
+        "serviceArea": "Khulna",
+        "servicePrice": 70
+    },
+    {
+        "serviceImage": "https://i.ibb.co/8bRYR3Q/pond-55176-1280.jpg",
+        "serviceName": "Pahela Baishakh Cultural Festival",
+        "serviceDescription": "Celebrate Bengali New Year with traditional festivities in Dhaka.",
+        "serviceProviderImage": "https://i.ibb.co/bvMMg3Z/pexels-pixabay-220453.jpg",
+        "serviceProviderName": "New Year Celebrations",
+        "serviceArea": "Dhaka",
+        "servicePrice": 0
+    }
+]

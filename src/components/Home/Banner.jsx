@@ -2,6 +2,7 @@ import { Button } from "flowbite-react";
 import { BsArrowRight } from 'react-icons/bs';
 import { TiTick } from 'react-icons/ti';
 import { AiOutlineDownCircle } from 'react-icons/ai';
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -14,7 +15,7 @@ const Banner = () => {
                     <div data-aos="fade-up" data-aos-duration='1500'>
                         <Button color="transparent" size='md' pill className="w-fit border mb-4">Experience</Button>
                         <h2 className="text-7xl lg:w-3/4 mb-12">Discover Bangladesh with GoLocal Tours</h2>
-                        <Button color="light" size='xl' pill className="w-fit">Explore Tours<BsArrowRight className="ml-3"></BsArrowRight></Button>
+                        <Link to={'/services'}><Button color="light" size='xl' pill className="w-fit">Explore Tours<BsArrowRight className="ml-3"></BsArrowRight></Button></Link>
                     </div>
                     <div className="lg:w-1/2 text-gray-300" data-aos="fade-left" data-aos-duration='1500'>
                         <p className="text-base font-normal">Immerse yourself in the culture, history, and beauty of our region with our knowledgeable guides. </p>

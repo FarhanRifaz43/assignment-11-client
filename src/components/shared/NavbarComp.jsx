@@ -15,7 +15,7 @@ const NavbarComp = () => {
                 <Navbar.Collapse className='md:border border-white md:py-3 md:px-6 rounded-full text-white uppercase'>
                     <div className='md:flex bg-white md:bg-transparent text-black md:text-white items-center justify-between'>
                         <NavLink><h2 className='hover:bg-white hover:text-black px-4 py-2 rounded-full transition-all duration-200'>Home</h2></NavLink>
-                        <NavLink><h2 className='hover:bg-white hover:text-black px-4 py-2 rounded-full transition-all duration-200'>Services</h2></NavLink>
+                        <NavLink to={'/services'}><h2 className='hover:bg-white hover:text-black px-4 py-2 rounded-full transition-all duration-200'>Services</h2></NavLink>
                         <NavLink><h2 className='hover:bg-white hover:text-black px-4 py-2 rounded-full transition-all duration-200'>Logout</h2></NavLink>
                         <div className='hover:bg-white hover:text-black rounded-full'>
                             <Dropdown color='light bg-transparent' label="DASHBOARD" dismissOnClick={false}>
