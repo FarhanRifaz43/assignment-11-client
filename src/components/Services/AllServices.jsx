@@ -34,16 +34,16 @@ const AllServices = () => {
     return (
         <div>
             <div className="bg-gradient-to-r from-[#151515] to-[rgba (21, 21, 21, 0)]">
-                <img src="../../../resources/pexels-swarup-photography-13015186.jpg" alt="" className="h-[50vh] w-full object-cover" />
-                <div className="absolute h-[50vh] flex items-center left-0 top-0 bg-gradient-to-b w-full from-[#0000008d] to-[#00000067]">
-                    <div className='text-white w-3/4 mx-auto absolute top-44 left-28' data-aos="fade-right" data-aos-duration='1500'>
+                <img src="../../../resources/pexels-swarup-photography-13015186.jpg" alt="" className="h-[480px] w-full object-cover" />
+                <div className="absolute h-[480px] flex items-center left-0 top-0 bg-gradient-to-b w-full from-[#0000008d] to-[#00000067]">
+                    <div className='text-white md:w-3/4 mx-auto absolute top-44 md:left-28 left-8' data-aos="fade-right" data-aos-duration='1500'>
                         <Button data-aos="fade-right" data-aos-duration='1500' color="transparent" size='md' className="border mb-5" pill>Services</Button>
                         <h2 className="lg:text-7xl text-6xl">Find Your <br />Desired Service</h2>
                     </div>
                 </div>
             </div>
-            <div className=" w-1/2 mx-auto text-center" data-aos="fade-up" data-aos-duration='1000'>
-                <h2 className="mt-16 text-5xl mb-4">The Most Popular Destinations in Bangladesh</h2>
+            <div className=" md:w-1/2 mx-auto text-center" data-aos="fade-up" data-aos-duration='1000'>
+                <h2 className="mt-24 text-5xl mb-4">The Most Popular Destinations in Bangladesh</h2>
                 <p className="text-gray-500">Find your perfect place to spend vacation. Relax and enjoy every bit of freedom with us.</p>
                 <div className="max-w-md mx-auto mt-7 relative">
                     <TextInput onKeyUp={() => handleSearchFilter(document.getElementById('searchBar').value)} className="flex-grow" rightIcon={BiSearchAlt2} id="searchBar" type="name" placeholder="Type the service name you want to find..." required />
