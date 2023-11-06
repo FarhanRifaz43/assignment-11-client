@@ -46,7 +46,7 @@ const AllServices = () => {
                 <h2 className="mt-24 text-5xl mb-4">The Most Popular Destinations in Bangladesh</h2>
                 <p className="text-gray-500">Find your perfect place to spend vacation. Relax and enjoy every bit of freedom with us.</p>
                 <div className="max-w-md mx-auto mt-7 relative">
-                    <TextInput onKeyUp={() => handleSearchFilter(document.getElementById('searchBar').value)} className="flex-grow" rightIcon={BiSearchAlt2} id="searchBar" type="name" placeholder="Type the service name you want to find..." required />
+                    <TextInput onKeyUp={() => handleSearchFilter(document.getElementById('searchBar').value)} className="flex-grow" rightIcon={BiSearchAlt2} id="searchBar" type="name" placeholder="Type the service name you want to find..."/>
                 </div>
             </div>
             <h2 className="text-center mt-8 bg-gray-200 w-fit mx-auto px-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration='1400'><span className=" text-teal-700 font-bold text-xl">{count}</span> <span className="text-gray-600">Services Available</span></h2>

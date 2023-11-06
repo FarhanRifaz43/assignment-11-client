@@ -10,7 +10,7 @@ const Cards = ({ service }) => {
             <div className='h-72'>
                 <img src={serviceImage} alt="" className='w-full h-full object-cover rounded-xl' />
             </div>
-            <div className='px-3 absolute transition-all duration-200 opacity-100 hover:opacity-100 bottom-0 bg-gradient-to-t from-[#000000e3] to-[#00000000] w-full h-full rounded-lg'>
+            <div className='px-3 absolute transition-all duration-200 opacity-0 hover:opacity-100 bottom-0 bg-gradient-to-t from-[#000000e3] to-[#00000073] w-full h-full rounded-lg'>
                 <h5 className="text-2xl font-bold tracking-tight text-white mt-2 absolute top-5 left-6">
                     {serviceName}
                 </h5>
