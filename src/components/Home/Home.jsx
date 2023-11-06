@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Banner from "./Banner";
+import Popular from "./popular-services/Popular";
 
 const Home = () => {
 
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Popular></Popular>
         </div>
     );
 };
