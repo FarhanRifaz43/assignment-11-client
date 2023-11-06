@@ -5,7 +5,7 @@ const Service = ({ service }) => {
     const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice } = service;
 
     return (
-        <div className="rounded-2xl shadow-2xl relative w-96 h-60" data-aos="flip-down">
+        <div className="rounded-2xl shadow-2xl relative w-96 h-60" data-aos="fade-up">
             <img src={serviceImage} alt="" className="h-60 w-96 rounded-2xl" />
             <section className="bg-gradient-to-b w-96 from-[#0000008d] to-[#00000067] absolute top-0 h-60 rounded-2xl">
                 <div className="text-white">
