@@ -4,25 +4,24 @@ import { useLoaderData } from "react-router-dom";
 import Service from "./Service";
 import { TextInput } from 'flowbite-react';
 import { BiSearchAlt2 } from 'react-icons/bi';
-import axios from "axios";
-import ButtonGroup from "flowbite-react/lib/esm/components/Button/ButtonGroup";
 
 const AllServices = () => {
 
     const services = useLoaderData();
 
-    const [filtered, setFiltered] = useState(services)
-    const [hiddenFiltered, setHiddenFiltered] = useState(filtered.slice(0, 6))
+    const [count, setCount] = useState(services.length)
+    const [hiddenFiltered, setHiddenFiltered] = useState(services.slice(0, 6))
     const [showAll, setShowAll] = useState(true)
 
     const handleSearchFilter = e => {
         const name = e.toUpperCase();
         const filteredServices = services.filter(service => service.serviceName.toUpperCase().includes(name))
-        setFiltered(filteredServices);
+        setHiddenFiltered(filteredServices);
+        setCount(filteredServices.length)
     }
 
     const handleShowAll = () => {
-        setHiddenFiltered(filtered)
+        setHiddenFiltered(services)
         setShowAll(false)
     }
 
@@ -50,7 +49,7 @@ const AllServices = () => {
                     <TextInput onKeyUp={() => handleSearchFilter(document.getElementById('searchBar').value)} className="flex-grow" rightIcon={BiSearchAlt2} id="searchBar" type="name" placeholder="Type the service name you want to find..." required />
                 </div>
             </div>
-            <h2 className="text-center mt-8 bg-gray-200 w-fit mx-auto px-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration='1400'><span className=" text-teal-700 font-bold text-xl">{filtered.length}</span> <span className="text-gray-600">Services Available</span></h2>
+            <h2 className="text-center mt-8 bg-gray-200 w-fit mx-auto px-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration='1400'><span className=" text-teal-700 font-bold text-xl">{count}</span> <span className="text-gray-600">Services Available</span></h2>
             <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 md:w-[85vw] w-fit mx-auto mt-8">
                 {
                     hiddenFiltered.map(service => <Service key={service._id} service={service}></Service>)
