@@ -1,17 +1,25 @@
-import { Button, Card } from "flowbite-react";
+import { Button, Card, Label, Modal, TextInput, Datepicker } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import MoreCard from "./MoreCard";
 
 const ServiceDetail = () => {
 
     const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice } = useLoaderData()
+    const [services, setServices] = useState([]);
+    const filteredServices = services.filter(service => service.serviceProviderName === serviceProviderName)
 
-    const [filteredServices, setFilteredServices] = useState([]);
+    const [openModal, setOpenModal] = useState(false);
+    const price = '$' + servicePrice;
+
+    function onCloseModal() {
+        setOpenModal(false);
+    }
 
     useEffect(() => {
-        fetch(`http://localhost:3000/services/${serviceProviderName}`)
-        .then(res => res.json())
-        .then(data => setFilteredServices(data))
+        fetch(`http://localhost:3000/services`)
+            .then(res => res.json())
+            .then(data => setServices(data))
     }, [serviceProviderName])
 
     return (
@@ -25,13 +33,13 @@ const ServiceDetail = () => {
                     </div>
                 </div>
             </div>
-            <section className="w-[85%] mx-auto mt-12">
+            <section className="md:w-[85%] mx-auto mt-12" data-aos='fade-up' data-aos-duration='800'>
                 <div className="flex items-center gap-4">
                     <h2 className="text-4xl font-bold border-l-8 border-green-600 pl-4">Service Overview</h2> <hr className="flex-grow border border-black" />
                 </div>
-                <section className="flex gap-6">
-                    <div>
-                        <div className="bg-gray-100 grid grid-cols-2 gap-10 p-4 mt-8 w-full h-fit">
+                <section className="flex md:flex-row flex-col gap-6">
+                    <div className="flex-grow">
+                        <div className="bg-gray-100 grid grid-cols-2 gap-10 p-4 mt-8 w-full h-fit rounded-lg">
                             <div className="border-r-2 border-gray-300">
                                 <h2 className="text-2xl font-bold mb-2">Description</h2>
                                 <p className="text-gray-600">{serviceDescription}</p>
@@ -53,12 +61,16 @@ const ServiceDetail = () => {
                             </div>
                         </div>
                         <div className="mt-14">
-                            <h2 className="text-2xl font-bold">All Services From {serviceProviderName}</h2>
-
+                            <h2 className="text-2xl font-semibold mb-6">All Services From {serviceProviderName}</h2>
+                            <div className="grid grid-cols-3 mx-auto gap-4">
+                                {
+                                    filteredServices.map(e => <MoreCard key={e._id} e={e}></MoreCard>)
+                                }
+                            </div>
                         </div>
                     </div>
                     <div className="w-1/4 mt-8">
-                        <Card className='w-full'>
+                        <Card className='w-96'>
                             <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Discover the Perfect Package</h5>
                             <div className="flex items-baseline text-gray-900 dark:text-white">
                                 <span className="text-3xl font-semibold">$</span>
@@ -115,12 +127,59 @@ const ServiceDetail = () => {
                                     <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Wi-Fi Access if Available</span>
                                 </li>
                             </ul>
-                            <button
-                                type="button"
-                                className="inline-flex w-full justify-center rounded-lg bg-green-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-200"
-                            >
-                                Book Now
-                            </button>
+                            <Button color="success" onClick={() => setOpenModal(true)}>Book Now</Button>
+                            <Modal show={openModal} size="4xl" onClose={onCloseModal} popup>
+                                <Modal.Header />
+                                <Modal.Body>
+                                    <form>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            <div>
+                                                <div className="mb-2 block">
+                                                    <Label value="Service Name" />
+                                                </div>
+                                                <TextInput type="name" value={serviceName} readOnly/>
+                                            </div>
+                                            <div>
+                                                <div className="mb-2 block">
+                                                    <Label value="Service Image" />
+                                                </div>
+                                                <TextInput type="photoURL" value={serviceImage} readOnly/>
+                                            </div>
+                                            <div>
+                                                <div className="mb-2 block">
+                                                    <Label value="Service Provider Name" />
+                                                </div>
+                                                <TextInput type="name" value={serviceProviderName} readOnly/>
+                                            </div>
+                                            <div>
+                                                <div className="mb-2 block">
+                                                    <Label value="Your E-mail" />
+                                                </div>
+                                                <TextInput type="email" readOnly/>
+                                            </div>
+                                            <div>
+                                                <div className="mb-2 block">
+                                                    <Label value="Serving Date" />
+                                                </div>
+                                                <Datepicker id="date"></Datepicker>
+                                            </div>
+                                            <div>
+                                                <div className="mb-2 block">
+                                                    <Label value="Special Instruction" />
+                                                </div>
+                                                <TextInput type="textBox"/>
+                                            </div>
+                                            <div>
+                                                <div className="mb-2 block">
+                                                    <Label value="Price" />
+                                                </div>
+                                                <TextInput type="Price" value={price} readOnly/>
+                                            </div>
+                                        </div>
+                                        <Button color="success" type="submit" className="w-full mt-8">Purchase</Button>
+                                    </form>
+                                </Modal.Body>
+                            </Modal>
                         </Card>
                     </div>
                 </section>
