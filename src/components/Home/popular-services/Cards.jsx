@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Cards = ({ service }) => {
 
-    const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice } = service;
+    const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice, _id } = service;
 
     return (
         <div className='relative' data-aos="fade-right">
@@ -26,7 +26,7 @@ const Cards = ({ service }) => {
                         </div>
                     </div>
                 </div>
-                <Link><button className='border rounded-full bottom-3 right-4 absolute p-3'><AiOutlineArrowRight className='text-white text-xl'></AiOutlineArrowRight></button></Link>
+                <Link to={`/services/${_id}`}><button className='border rounded-full bottom-3 right-4 absolute p-3'><AiOutlineArrowRight className='text-white text-xl'></AiOutlineArrowRight></button></Link>
             </div>
         </div>
     );

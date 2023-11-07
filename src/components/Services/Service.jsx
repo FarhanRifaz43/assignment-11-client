@@ -1,8 +1,9 @@
 import { Button } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
 
-    const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice } = service;
+    const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice, _id } = service;
 
     return (
         <div className="rounded-2xl shadow-2xl relative w-96 h-60" data-aos="fade-up">
@@ -20,7 +21,7 @@ const Service = ({ service }) => {
                             <h2 className="text-gray-300">${servicePrice}</h2>
                         </div>
                     </div>
-                    <Button color="gray" className="mt-14 mr-3">View Details</Button>
+                    <Link to={`/services/${_id}`}><Button color="gray" className="mt-14 mr-3">View Details</Button></Link>
                 </div>
             </section>
         </div>
