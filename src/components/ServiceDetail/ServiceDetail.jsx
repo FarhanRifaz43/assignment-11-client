@@ -2,6 +2,8 @@ import { Button, Card, Label, Modal, TextInput, Datepicker } from "flowbite-reac
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import MoreCard from "./MoreCard";
+import Swal from 'sweetalert2';
+
 
 const ServiceDetail = () => {
 
@@ -14,6 +16,40 @@ const ServiceDetail = () => {
 
     function onCloseModal() {
         setOpenModal(false);
+    }
+
+    const handleOnSubmit = e => {
+        e.preventDefault();
+        const booking = {
+            serviceArea: serviceArea,
+            serviceImage: serviceImage,
+            serviceName: serviceName,
+            serviceProviderName: serviceProviderName,
+            servicePrice: servicePrice,
+            serviceDate: document.getElementById('date').value,
+            specialInstruction: document.getElementById('instruction').value
+        }
+        fetch('http://localhost:3000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Service Booked Successfully!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    setOpenModal(false);
+                }
+            })
     }
 
     useEffect(() => {
@@ -131,31 +167,31 @@ const ServiceDetail = () => {
                             <Modal show={openModal} size="4xl" onClose={onCloseModal} popup>
                                 <Modal.Header />
                                 <Modal.Body>
-                                    <form>
+                                    <form onSubmit={handleOnSubmit}>
                                         <div className="grid grid-cols-2 gap-3">
                                             <div>
                                                 <div className="mb-2 block">
                                                     <Label value="Service Name" />
                                                 </div>
-                                                <TextInput type="name" value={serviceName} readOnly/>
+                                                <TextInput type="name" value={serviceName} readOnly />
                                             </div>
                                             <div>
                                                 <div className="mb-2 block">
                                                     <Label value="Service Image" />
                                                 </div>
-                                                <TextInput type="photoURL" value={serviceImage} readOnly/>
+                                                <TextInput type="photoURL" value={serviceImage} readOnly />
                                             </div>
                                             <div>
                                                 <div className="mb-2 block">
                                                     <Label value="Service Provider Name" />
                                                 </div>
-                                                <TextInput type="name" value={serviceProviderName} readOnly/>
+                                                <TextInput type="name" value={serviceProviderName} readOnly />
                                             </div>
                                             <div>
                                                 <div className="mb-2 block">
                                                     <Label value="Your E-mail" />
                                                 </div>
-                                                <TextInput type="email" readOnly/>
+                                                <TextInput type="email" readOnly />
                                             </div>
                                             <div>
                                                 <div className="mb-2 block">
@@ -167,13 +203,13 @@ const ServiceDetail = () => {
                                                 <div className="mb-2 block">
                                                     <Label value="Special Instruction" />
                                                 </div>
-                                                <TextInput type="textBox"/>
+                                                <TextInput id="instruction" type="textBox" />
                                             </div>
                                             <div>
                                                 <div className="mb-2 block">
                                                     <Label value="Price" />
                                                 </div>
-                                                <TextInput type="Price" value={price} readOnly/>
+                                                <TextInput type="Price" value={price} readOnly />
                                             </div>
                                         </div>
                                         <Button color="success" type="submit" className="w-full mt-8">Purchase</Button>
