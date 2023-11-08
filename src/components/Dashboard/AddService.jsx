@@ -21,7 +21,7 @@ const AddService = () => {
 
         const newService = { serviceImage, serviceArea, serviceDescription, serviceName, servicePrice, serviceProviderImage, serviceProviderName, serviceProviderEmail }
 
-        fetch('https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services', {
+        fetch('https://tour-service-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -47,7 +47,7 @@ const AddService = () => {
     return (
         <div>
             <div className="relative">
-                <img src="../../resources/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
+                <img src="../../resources/https://i.ibb.co/XpbgyXk/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
                 <div className="h-[360px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
                     <h2 className="text-white text-7xl mt-60 ml-28" data-aos="fade-right" data-aos-duration="1000">Add Your Service</h2>
                 </div>

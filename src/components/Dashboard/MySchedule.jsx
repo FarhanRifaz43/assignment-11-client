@@ -7,8 +7,8 @@ const MySchedule = () => {
     const [bookings, setBookings] = useState([]);
     const [pendings, setPendings] = useState([]);
     const { user } = useContext(AuthContext);
-    const urlBooking = `https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/bookings?email=${user.email}`;
-    const urlPending = `https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/pendings?name=${user.displayName}`;
+    const urlBooking = `https://tour-service-server.vercel.app/bookings?email=${user.email}`;
+    const urlPending = `https://tour-service-server.vercel.app/pendings?name=${user.displayName}`;
 
     useEffect(() => {
         fetch(urlBooking)
@@ -23,7 +23,7 @@ const MySchedule = () => {
     }, [urlPending])
 
     const handleStateUpdate = (id, state) => {
-        fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/bookings/${id}`, {
+        fetch(`https://tour-service-server.vercel.app/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +45,7 @@ const MySchedule = () => {
     return (
         <div>
             <div className="relative">
-                <img src="../../resources/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
+                <img src="../../resources/https://i.ibb.co/XpbgyXk/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
                 <div className="h-[360px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
                     <h2 className="text-white text-7xl mt-60 ml-28" data-aos="fade-right" data-aos-duration="1000">Services You Booked</h2>
                 </div>

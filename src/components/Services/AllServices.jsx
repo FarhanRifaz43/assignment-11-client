@@ -34,7 +34,7 @@ const AllServices = () => {
     return (
         <div>
             <div className="bg-gradient-to-r from-[#151515] to-[rgba (21, 21, 21, 0)]">
-                <img src="../../../resources/pexels-swarup-photography-13015186.jpg" alt="" className="h-[480px] w-full object-cover" />
+                <img src="https://i.ibb.co/wgShGfF/https://i.ibb.co/wgShGfF/pexels-swarup-photography-13015186.jpg" alt="" className="h-[480px] w-full object-cover" />
                 <div className="absolute h-[480px] flex items-center left-0 top-0 bg-gradient-to-b w-full from-[#0000008d] to-[#00000067]">
                     <div className='text-white md:w-3/4 mx-auto absolute top-44 md:left-28 left-8' data-aos="fade-right" data-aos-duration='1500'>
                         <Button data-aos="fade-right" data-aos-duration='1500' color="transparent" size='md' className="border mb-5" pill>Services</Button>

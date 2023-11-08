@@ -29,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: '/services',
         element: <AllServices></AllServices>,
-        loader: () => fetch('https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services')
+        loader: () => fetch('https://tour-service-server.vercel.app/services')
       },
       {
         path: '/services/:id',
         element: <PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services/${params.id}`)
+        loader: ({ params }) => fetch(`https://tour-service-server.vercel.app/services/${params.id}`)
       },
       {
         path: '/login',

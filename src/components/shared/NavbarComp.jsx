@@ -37,7 +37,7 @@ const NavbarComp = () => {
                     <span className="self-center whitespace-nowrap text-4xl font-semibold text-gray-200">GoLocal</span>
                 </Navbar.Brand>
                 <div className="flex md:order-2">
-                    <img src={user ? user.photoURL : '../../../resources/istockphoto-1341046662-612x612.jpg'} alt="" className='w-12 rounded-full' />
+                    <img src={user ? user.photoURL : 'https://i.ibb.co/7kgBp4r/istockphoto-1341046662-612x612.jpg'} alt="" className='w-12 rounded-full' />
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse className='md:border border-white md:py-3 md:px-6 rounded-full text-white uppercase'>

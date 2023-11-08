@@ -9,7 +9,7 @@ const Popular = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        fetch('https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services')
+        fetch('https://tour-service-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data.slice(6, 10)))
     }, [])

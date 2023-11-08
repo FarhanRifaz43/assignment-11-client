@@ -3,7 +3,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { AuthContext } from "./AuthProvider";
 import { Button, TextInput } from "flowbite-react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import authAnimation from '../../resources/authAnimation.json';
+import authAnimation from '../../public/resources/authAnimation.json';
 import Lottie from "lottie-react";
 
 const Login = () => {
@@ -36,7 +36,7 @@ const Login = () => {
     return (
         <div>
             <div className="relative">
-                <img src="../../resources/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
+                <img src="../../resources/https://i.ibb.co/XpbgyXk/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
                 <div className="h-[360px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
                     <h2 className="text-white text-7xl mt-60 ml-28" data-aos="fade-right" data-aos-duration="1000">Welcome Back!</h2>
                 </div>

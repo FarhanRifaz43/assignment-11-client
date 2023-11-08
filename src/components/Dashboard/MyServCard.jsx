@@ -25,7 +25,7 @@ const MyServCard = ({ serv, handleDelete }) => {
 
         const updatedService = { newServiceImage, newServiceArea, newServiceDescription, newServiceName, newServicePrice, newServiceProviderName }
 
-        fetch(`http://localhost:3000/services/${id}`, {
+        fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

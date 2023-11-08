@@ -8,7 +8,7 @@ const MyServices = () => {
 
     const [myServices, setMyServices] = useState([]);
     const { user } = useContext(AuthContext);
-    const url = `https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/my-services?email=${user.email}`;
+    const url = `https://tour-service-server.vercel.app/my-services?email=${user.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -27,7 +27,7 @@ const MyServices = () => {
             confirmButtonText: "Delete Service"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services/${id}`, {
+                fetch(`https://tour-service-server.vercel.app/services/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -49,7 +49,7 @@ const MyServices = () => {
     return (
         <div>
             <div className="relative">
-                <img src="../../resources/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
+                <img src="../../resources/https://i.ibb.co/XpbgyXk/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
                 <div className="h-[360px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
                     <h2 className="text-white text-7xl mt-60 ml-28" data-aos="fade-right" data-aos-duration="1000">Manage Your Services</h2>
                 </div>

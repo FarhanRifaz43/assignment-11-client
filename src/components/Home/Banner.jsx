@@ -1,15 +1,12 @@
 import { Button } from "flowbite-react";
 import { BsArrowRight } from 'react-icons/bs';
 import { TiTick } from 'react-icons/ti';
-import { AiOutlineDownCircle } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
         <div className="relative h-screen">
-            <video className="absolute top-0 left-0 w-full h-full object-cover z-0" autoPlay muted loop>
-                <source src="../../../resources/1105.mp4" type="video/mp4" />
-            </video>
+                <img className="absolute top-0 left-0 w-full h-full object-cover z-0" src="https://i.ibb.co/18J3vqB/pexels-kelly-2382898.jpg" alt="" />
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-1">
                 <div className="relative mt-12 z-2 text-white text-3xl flex lg:flex-row flex-col gap-12 lg:gap-0 items-center justify-center h-full md:w-[85vw] mx-auto font-bold p-4">
                     <div data-aos="fade-up" data-aos-duration='1500'>
