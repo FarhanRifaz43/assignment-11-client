@@ -8,7 +8,7 @@ const MyServices = () => {
 
     const [myServices, setMyServices] = useState([]);
     const { user } = useContext(AuthContext);
-    const url = `http://localhost:3000/my-services?email=${user.email}`;
+    const url = `https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/my-services?email=${user.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -27,7 +27,7 @@ const MyServices = () => {
             confirmButtonText: "Delete Service"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/services/${id}`, {
+                fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

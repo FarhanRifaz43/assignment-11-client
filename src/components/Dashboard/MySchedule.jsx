@@ -7,8 +7,8 @@ const MySchedule = () => {
     const [bookings, setBookings] = useState([]);
     const [pendings, setPendings] = useState([]);
     const { user } = useContext(AuthContext);
-    const urlBooking = `http://localhost:3000/bookings?email=${user.email}`;
-    const urlPending = `http://localhost:3000/pendings?name=${user.displayName}`;
+    const urlBooking = `https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/bookings?email=${user.email}`;
+    const urlPending = `https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/pendings?name=${user.displayName}`;
 
     useEffect(() => {
         fetch(urlBooking)
@@ -23,7 +23,7 @@ const MySchedule = () => {
     }, [urlPending])
 
     const handleStateUpdate = (id, state) => {
-        fetch(`http://localhost:3000/bookings/${id}`, {
+        fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

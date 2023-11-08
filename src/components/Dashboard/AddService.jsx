@@ -21,7 +21,7 @@ const AddService = () => {
 
         const newService = { serviceImage, serviceArea, serviceDescription, serviceName, servicePrice, serviceProviderImage, serviceProviderName, serviceProviderEmail }
 
-        fetch('http://localhost:3000/services', {
+        fetch('https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

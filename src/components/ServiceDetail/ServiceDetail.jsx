@@ -32,7 +32,7 @@ const ServiceDetail = () => {
             serviceDate: document.getElementById('date').value,
             specialInstruction: document.getElementById('instruction').value
         }
-        fetch('http://localhost:3000/bookings', {
+        fetch('https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -56,7 +56,7 @@ const ServiceDetail = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:3000/services`)
+        fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services`)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [serviceProviderName])
