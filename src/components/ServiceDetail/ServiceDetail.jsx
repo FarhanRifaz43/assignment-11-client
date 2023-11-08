@@ -83,7 +83,7 @@ const ServiceDetail = () => {
                             <div className="ml-3">
                                 <h2 className="text-2xl font-bold mb-2">Provider</h2>
                                 <div className="flex items-center gap-2">
-                                    <img src={serviceProviderImage} alt="" className="w-12 h-12 object-cover rounded-full" />
+                                    <img src={serviceProviderImage ? serviceProviderImage : '/resources/istockphoto-1341046662-612x612.jpg'} alt="" className="w-12 h-12 object-cover rounded-full" />
                                     <p className="text-gray-600">{serviceProviderName}</p>
                                 </div>
                             </div>

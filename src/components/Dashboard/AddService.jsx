@@ -14,11 +14,12 @@ const AddService = () => {
         const serviceName = document.getElementById('nameSer').value;
         const serviceDescription = document.getElementById('descSer').value;
         const serviceProviderImage = user.photoURL;
+        const serviceProviderEmail = user.email;
         const serviceProviderName = document.getElementById('yourName').value;
         const serviceArea = document.getElementById('areaSer').value;
         const servicePrice = document.getElementById('priceSer').value;
 
-        const newService = { serviceImage, serviceArea, serviceDescription, serviceName, servicePrice, serviceProviderImage, serviceProviderName }
+        const newService = { serviceImage, serviceArea, serviceDescription, serviceName, servicePrice, serviceProviderImage, serviceProviderName, serviceProviderEmail }
 
         fetch('http://localhost:3000/services', {
             method: 'POST',

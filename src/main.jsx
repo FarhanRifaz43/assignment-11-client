@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReactDOM from 'react-dom/client'
 import Root from './Root.jsx'
 import ErrorPage from './ErrorPage.jsx'
@@ -13,6 +13,7 @@ import AuthProvider from './Auth/AuthProvider.jsx';
 import PrivateRoute from './Auth/PrivateRoute.jsx';
 import AddService from './components/Dashboard/AddService.jsx';
 import MyServices from './components/Dashboard/MyServices.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -48,8 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/my-services',
-        element: <PrivateRoute><MyServices></MyServices></PrivateRoute>,
-        loader: () => fetch('http://localhost:3000/services')
+        element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
       }
     ]
   },
