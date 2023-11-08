@@ -49,7 +49,7 @@ const NavbarComp = () => {
                             <div className='hover:bg-white hover:text-black rounded-full'>
                                 <Dropdown color='light bg-transparent' label="DASHBOARD" dismissOnClick={false}>
                                     <Dropdown.Item><NavLink>My Services</NavLink></Dropdown.Item>
-                                    <Dropdown.Item><NavLink>Add a Service</NavLink></Dropdown.Item>
+                                    <Dropdown.Item><NavLink to={'/add'}>Add a Service</NavLink></Dropdown.Item>
                                     <Dropdown.Item><NavLink>My Schedule</NavLink></Dropdown.Item>
                                 </Dropdown>
                             </div>

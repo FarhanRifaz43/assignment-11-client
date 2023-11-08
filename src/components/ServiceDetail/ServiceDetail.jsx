@@ -98,7 +98,7 @@ const ServiceDetail = () => {
                         </div>
                         <div className="mt-14">
                             <h2 className="text-2xl font-semibold mb-6">All Services From {serviceProviderName}</h2>
-                            <div className="grid grid-cols-3 mx-auto gap-4">
+                            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-auto gap-4">
                                 {
                                     filteredServices.map(e => <MoreCard key={e._id} e={e}></MoreCard>)
                                 }

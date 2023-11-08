@@ -2,11 +2,11 @@ import { Button, Card } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 
 const MoreCard = ({ e }) => {
-    const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice, _id } = e;
+    const { serviceImage, serviceName, servicePrice, _id } = e;
 
     return (
         <Card className="rounded-2xl relative h-fit">
-            <img src={serviceImage} alt="" className="rounded-2xl" />
+            <img src={serviceImage} alt="" className="rounded-2xl h-48 object-cover" />
             <div>
                 <div className="">
                     <h2 className="font-bold text-2xl text-center h-16">{serviceName}</h2>

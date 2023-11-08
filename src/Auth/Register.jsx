@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from 'react-icons/fc'
-import { Link, NavLink, Navigate } from "react-router-dom";
+import { Link, NavLink, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { Button, TextInput } from 'flowbite-react';
 import authAnimation from '../../resources/authAnimation.json';
@@ -10,6 +10,8 @@ import { updateProfile } from "firebase/auth";
 const Register = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const { handleGoogleSignIn, createUser } = useContext(AuthContext);
 
@@ -31,7 +33,6 @@ const Register = () => {
             setError('Your password should contain at least one special character');
             return;
         }
-
         setError('');
         setSuccess('');
         createUser(email, password)
@@ -41,6 +42,17 @@ const Register = () => {
                 displayName : name,
                 photoURL: photo
             })
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(err => {
+            setError('Email already in use. Provide a new email')
+        })
+    }
+
+    const googleSignIn = () => {
+        handleGoogleSignIn()
+        .then(result => {
+            navigate(location?.state ? location.state : '/')
         })
     }
 
@@ -87,7 +99,7 @@ const Register = () => {
                         </p></Link>
                     </div>
                     <div className="flex items-center gap-3 w-fit mx-auto">
-                        <span>Or, sign in with</span><Button onClick={handleGoogleSignIn} color="gray"><FcGoogle className="mr-1 text-xl"></FcGoogle>Google</Button>
+                        <span>Or, sign in with</span><Button onClick={googleSignIn} color="gray"><FcGoogle className="mr-1 text-xl"></FcGoogle>Google</Button>
                     </div>
                 </div>
                 <div>

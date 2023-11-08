@@ -10,6 +10,8 @@ import ServiceDetail from './components/ServiceDetail/ServiceDetail.jsx';
 import Login from './Auth/Login.jsx';
 import Register from './Auth/Register.jsx';
 import AuthProvider from './Auth/AuthProvider.jsx';
+import PrivateRoute from './Auth/PrivateRoute.jsx';
+import AddService from './components/Dashboard/AddService.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/services/:id',
-        element: <ServiceDetail></ServiceDetail>,
+        element: <PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:3000/services/${params.id}`)
       },
       {
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/add',
+        element: <AddService></AddService>
       }
     ]
   },

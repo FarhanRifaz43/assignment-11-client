@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { FcGoogle } from 'react-icons/fc'
 import { AuthContext } from "./AuthProvider";
 import { Button, TextInput } from "flowbite-react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import authAnimation from '../../resources/authAnimation.json';
 import Lottie from "lottie-react";
 
@@ -11,6 +11,8 @@ const Login = () => {
     const { signInUser, handleGoogleSignIn } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -18,12 +20,18 @@ const Login = () => {
         const password = document.getElementById('password1').value;
         signInUser(email, password)
             .then(result => {
-                setSuccess("Logged in successfully!");
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 setError("The credentials don't match. Check if they are valid and try again")
             })
     }
+    const googleSignIn = () => {
+        handleGoogleSignIn()
+        .then(result => {
+            navigate(location?.state ? location.state : '/')
+        })}
+    
 
     return (
         <div>
@@ -56,7 +64,7 @@ const Login = () => {
                         </p></Link>
                     </div>
                     <div className="flex items-center gap-3 w-fit mx-auto">
-                        <span>Or, sign in with</span><Button onClick={handleGoogleSignIn} color="gray"><FcGoogle className="mr-1 text-xl"></FcGoogle>Google</Button>
+                        <span>Or, sign in with</span><Button onClick={googleSignIn} color="gray"><FcGoogle className="mr-1 text-xl"></FcGoogle>Google</Button>
                     </div>
                 </div>
                 <div>
