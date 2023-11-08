@@ -50,7 +50,7 @@ const NavbarComp = () => {
                                 <Dropdown color='light bg-transparent' label="DASHBOARD" dismissOnClick={false}>
                                     <Dropdown.Item><NavLink to={'/my-services'}>My Services</NavLink></Dropdown.Item>
                                     <Dropdown.Item><NavLink to={'/add'}>Add a Service</NavLink></Dropdown.Item>
-                                    <Dropdown.Item><NavLink>My Schedule</NavLink></Dropdown.Item>
+                                    <Dropdown.Item><NavLink to={'/my-schedule'}>My Schedule</NavLink></Dropdown.Item>
                                 </Dropdown>
                             </div>
                             <NavLink onClick={handleLogOut}><h2 className='hover:bg-white hover:text-black px-4 py-2 rounded-full transition-all duration-200'>Logout</h2></NavLink>

@@ -13,6 +13,7 @@ import AuthProvider from './Auth/AuthProvider.jsx';
 import PrivateRoute from './Auth/PrivateRoute.jsx';
 import AddService from './components/Dashboard/AddService.jsx';
 import MyServices from './components/Dashboard/MyServices.jsx';
+import MySchedule from './components/Dashboard/MySchedule.jsx';
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: '/my-services',
         element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
+      },
+      {
+        path: '/my-schedule',
+        element: <PrivateRoute><MySchedule></MySchedule></PrivateRoute>
       }
     ]
   },

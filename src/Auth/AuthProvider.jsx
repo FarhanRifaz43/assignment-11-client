@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "./firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
-import { Navigate } from "react-router-dom";
 
 const provider = new GoogleAuthProvider();
 

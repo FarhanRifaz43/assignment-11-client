@@ -1,8 +1,9 @@
 import { Button, Card, Label, Modal, TextInput, Datepicker } from "flowbite-react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import MoreCard from "./MoreCard";
 import Swal from 'sweetalert2';
+import { AuthContext } from "../../Auth/AuthProvider";
 
 
 const ServiceDetail = () => {
@@ -10,6 +11,7 @@ const ServiceDetail = () => {
     const { serviceArea, serviceImage, serviceName, serviceDescription, serviceProviderName, serviceProviderImage, servicePrice } = useLoaderData()
     const [services, setServices] = useState([]);
     const filteredServices = services.filter(service => service.serviceProviderName === serviceProviderName)
+    const {user} = useContext(AuthContext);
 
     const [openModal, setOpenModal] = useState(false);
     const price = '$' + servicePrice;
@@ -25,6 +27,7 @@ const ServiceDetail = () => {
             serviceImage: serviceImage,
             serviceName: serviceName,
             serviceProviderName: serviceProviderName,
+            receiverEmail: user.email,
             servicePrice: servicePrice,
             serviceDate: document.getElementById('date').value,
             specialInstruction: document.getElementById('instruction').value
@@ -191,7 +194,7 @@ const ServiceDetail = () => {
                                                 <div className="mb-2 block">
                                                     <Label value="Your E-mail" />
                                                 </div>
-                                                <TextInput type="email" readOnly />
+                                                <TextInput type="email" value={user.email} readOnly />
                                             </div>
                                             <div>
                                                 <div className="mb-2 block">
