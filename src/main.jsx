@@ -12,6 +12,7 @@ import Register from './Auth/Register.jsx';
 import AuthProvider from './Auth/AuthProvider.jsx';
 import PrivateRoute from './Auth/PrivateRoute.jsx';
 import AddService from './components/Dashboard/AddService.jsx';
+import MyServices from './components/Dashboard/MyServices.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/add',
-        element: <AddService></AddService>
+        element: <PrivateRoute><AddService></AddService></PrivateRoute>
+      },
+      {
+        path: '/my-services',
+        element: <PrivateRoute><MyServices></MyServices></PrivateRoute>,
+        loader: () => fetch('http://localhost:3000/services')
       }
     ]
   },

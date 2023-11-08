@@ -87,7 +87,8 @@ const AddService = () => {
                     <div>
                         <TextInput
                             id="priceSer"
-                            placeholder="Offer your pricing..."
+                            type='number'
+                            placeholder="Offer your pricing(per person)..."
                             required
                         />
                     </div>
