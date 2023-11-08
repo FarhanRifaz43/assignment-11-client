@@ -8,6 +8,8 @@ import Home from './components/Home/Home.jsx';
 import AllServices from './components/Services/AllServices.jsx';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail.jsx';
 import Login from './Auth/Login.jsx';
+import Register from './Auth/Register.jsx';
+import AuthProvider from './Auth/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,11 +29,15 @@ const router = createBrowserRouter([
       {
         path: '/services/:id',
         element: <ServiceDetail></ServiceDetail>,
-        loader: ({params}) => fetch(`http://localhost:3000/services/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:3000/services/${params.id}`)
       },
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },
@@ -39,6 +45,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
