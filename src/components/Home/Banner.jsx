@@ -11,7 +11,7 @@ const Banner = () => {
                 <div className="relative mt-12 z-2 text-white text-3xl flex lg:flex-row flex-col gap-12 lg:gap-0 items-center justify-center h-full md:w-[85vw] mx-auto font-bold p-4">
                     <div data-aos="fade-up" data-aos-duration='1500'>
                         <Button color="transparent" size='md' pill className="w-fit border mb-4">Experience</Button>
-                        <h2 className="text-7xl lg:w-3/4 mb-12">Discover Bangladesh with GoLocal Tours</h2>
+                        <h2 className="lg:text-7xl text-4xl lg:w-3/4 mb-12">Discover Bangladesh with GoLocal Tours</h2>
                         <Link to={'/services'}><Button color="light" size='xl' pill className="w-fit">Explore Tours<BsArrowRight className="ml-3"></BsArrowRight></Button></Link>
                     </div>
                     <div className="lg:w-1/2 text-gray-300" data-aos="fade-left" data-aos-duration='1500'>

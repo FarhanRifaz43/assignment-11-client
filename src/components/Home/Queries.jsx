@@ -4,8 +4,8 @@ const Queries = () => {
     return (
         <div className='mb-28'>
             <h2 className="text-5xl text-center mt-20 mb-3" data-aos="fade-up" data-aos-duration='1000'>Curious? We've Got You Covered!</h2>
-            <div className='flex gap-12 mt-16 w-[85%] mx-auto' data-aos="fade-up" data-aos-duration='1000'>
-                <Accordion collapseAll className='w-1/2 rounded-none border-none'>
+            <div className='flex md:flex-row flex-col gap-12 mt-16 w-[85%] mx-auto' data-aos="fade-up" data-aos-duration='1000'>
+                <Accordion collapseAll className='md:w-1/2 rounded-none border-none'>
                     <Accordion.Panel>
                         <Accordion.Title>How do I book a tour?</Accordion.Title>
                         <Accordion.Content>
@@ -30,7 +30,7 @@ const Queries = () => {
                         </Accordion.Content>
                     </Accordion.Panel>
                 </Accordion>
-                <Accordion collapseAll className='w-1/2 rounded-none border-none'>
+                <Accordion collapseAll className='md:w-1/2 rounded-none border-none'>
                     <Accordion.Panel>
                         <Accordion.Title>What is your cancellation policy?</Accordion.Title>
                         <Accordion.Content>

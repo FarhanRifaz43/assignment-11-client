@@ -15,7 +15,7 @@ const Values = () => {
     return (
         <div className="py-12 w-[85%] mx-auto">
             <h2 className="text-5xl text-center mt-6 mb-16" data-aos="fade-up" data-aos-duration='1000'>Why Choose Us?</h2>
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                 {
                     values.map(value => <ValueCard key={value.title} value={value}></ValueCard>)
                 }

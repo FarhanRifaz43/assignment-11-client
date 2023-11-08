@@ -25,7 +25,7 @@ const MyServCard = ({ serv, handleDelete }) => {
 
         const updatedService = { newServiceImage, newServiceArea, newServiceDescription, newServiceName, newServicePrice, newServiceProviderName }
 
-        fetch(`https://tour-service-server-gizd0r9rz-farhanrifaz43s-projects.vercel.app/services/${id}`, {
+        fetch(`https://tour-service-server.vercel.app/services/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -49,7 +49,7 @@ const MyServCard = ({ serv, handleDelete }) => {
     }
 
     return (
-        <div className="flex justify-between items-center border p-4 rounded-xl">
+        <div className="md:flex justify-between items-center border p-4 rounded-xl">
             <Card className="max-w-sm shadow-none border-none" imgSrc={serviceImage} horizontal>
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {serviceName}
@@ -61,10 +61,10 @@ const MyServCard = ({ serv, handleDelete }) => {
                     ${servicePrice}/person
                 </p>
             </Card>
-            <section>
-                <Button onClick={() => setOpenModal(true)} className="w-40 mb-4" color="success">Update Service</Button>
-                <Button onClick={() => handleDelete(_id)} className="w-40 mb-4" color="warning">Delete Service</Button>
-                <Link to={`/services/${_id}`}><Button className="w-40">View Details</Button></Link>
+            <section className="flex md:block items-center gap-2">
+                <Button onClick={() => setOpenModal(true)} className="w-40 md:mb-4 md:h-full h-12" color="success">Update Service</Button>
+                <Button onClick={() => handleDelete(_id)} className="w-40 md:mb-4 md:h-full h-12" color="warning">Delete Service</Button>
+                <Link to={`/services/${_id}`}><Button className="w-40 md:h-full h-12">View Details</Button></Link>
 
 
                 <Modal show={openModal} size="3xl" onClose={onCloseModal} popup>

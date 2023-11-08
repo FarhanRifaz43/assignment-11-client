@@ -6,7 +6,7 @@ const FooterComp = () => {
     return (
         <Footer className='bg-black rounded-none mt-8 pt-6'>
             <div className="w-[90%] mx-auto">
-                <div className="grid mx-auto grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
+                <div className="grid mx-auto grid-cols-1 gap-8 px-6 py-8 md:grid-cols-4">
                     <div className='w-fit mx-auto'>
                         <h2 className='font-bold text-4xl text-gray-300'>GoLocal</h2>
                         <p className='text-gray-300'>Tours and Guides</p>

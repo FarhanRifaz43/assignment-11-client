@@ -40,14 +40,15 @@ const MySchedule = () => {
                 setPendings(newPendings);
             }
         })
+        window.location.reload()
     }
 
     return (
         <div>
             <div className="relative">
-                <img src="../../resources/https://i.ibb.co/XpbgyXk/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
-                <div className="h-[360px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
-                    <h2 className="text-white text-7xl mt-60 ml-28" data-aos="fade-right" data-aos-duration="1000">Services You Booked</h2>
+                <img src="https://i.ibb.co/CvzZJBs/pexels-rushow-khan-122107.jpg" className="h-[480px] w-full object-cover" alt="" />
+                <div className="h-[480px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
+                    <h2 className="text-white text-7xl mt-60 md:ml-28 ml-6" data-aos="fade-right" data-aos-duration="1000">Services You Booked</h2>
                 </div>
             </div>
             <section className="w-[75%] mx-auto shadow-xl">
@@ -117,7 +118,7 @@ const MySchedule = () => {
                                             <Table.Cell>{pending.serviceDate}</Table.Cell>
                                             <Table.Cell>${pending.servicePrice}/person</Table.Cell>
                                             <Table.Cell>
-                                                <Dropdown label={pending?.status ? pending.status : 'Pending'} color="success" dismissOnClick={false}>
+                                                <Dropdown label={pending.status ? pending.status : 'Pending'} color="success" dismissOnClick={false}>
                                                     <Dropdown.Item onClick={() => handleStateUpdate(pending._id, 'Pending')}>Pending</Dropdown.Item>
                                                     <Dropdown.Item onClick={() => handleStateUpdate(pending._id, 'In Progress')}>In Progress</Dropdown.Item>
                                                     <Dropdown.Item onClick={() => handleStateUpdate(pending._id, 'Completed')}>Completed</Dropdown.Item>

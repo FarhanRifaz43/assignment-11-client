@@ -22,7 +22,7 @@ const Popular = () => {
                     <Link to={'/services'}><Button color="light" size='xl' pill className="w-fit">Explore Tours<BsArrowRight className="ml-3"></BsArrowRight></Button></Link>
                 </div>
             </section>
-            <section className="grid lg:grid-cols-2 md:w-1/2 lg:w-3/4 gap-4">
+            <section className="grid md:grid-cols-2  lg:w-3/4 gap-4">
                 {
                     services.map(service => <Cards key={service._id} service={service}></Cards>)
                 }

@@ -47,16 +47,16 @@ const AddService = () => {
     return (
         <div>
             <div className="relative">
-                <img src="../../resources/https://i.ibb.co/XpbgyXk/pexels-rushow-khan-122107.jpg" className="h-[360px] w-full object-cover" alt="" />
-                <div className="h-[360px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
-                    <h2 className="text-white text-7xl mt-60 ml-28" data-aos="fade-right" data-aos-duration="1000">Add Your Service</h2>
+                <img src="https://i.ibb.co/CvzZJBs/pexels-rushow-khan-122107.jpg" className="h-[480px] w-full object-cover" alt="" />
+                <div className="h-[480px] bg-gradient-to-b from-[#0000008d] to-[#00000067] absolute top-0 w-full">
+                    <h2 className="text-white text-7xl mt-60 md:ml-28 ml-6" data-aos="fade-right" data-aos-duration="1000">Add Your Service</h2>
                 </div>
             </div>
-            <section className="items-center md:w-3/4 mx-auto">
+            <section className="items-center lg:w-3/4 mx-auto px-2">
                 <h2 className='text-center mt-10 text-3xl'>Please Provide the Required Information</h2>
                 <p className='text-center mt-2 text-gray-500'>These information help us reach our customers with more credibility and authenticity</p>
-                <div className="space-y-6 w-1/2 mt-8 mx-auto">
-                    <div className='grid grid-cols-2 gap-4'>
+                <div className="space-y-6 lg:w-1/2 md:w-3/4 mt-8 mx-auto">
+                    <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
                     <div>
                         <TextInput
                             id="photoSer"
@@ -100,7 +100,7 @@ const AddService = () => {
                             required
                         />
                     </div>
-                    <div className='col-span-2'>
+                    <div className='md:col-span-2'>
                         <TextInput id="descSer" placeholder="Short description of your service..." required />
                     </div>
                     </div>

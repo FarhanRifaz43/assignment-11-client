@@ -33,7 +33,7 @@ const NavbarComp = () => {
     return (
         <div className='bg-transparent absolute top-0 left-0 right-0 z-10 lg:w-[85vw] mx-auto pt-6' data-aos="fade-down" data-aos-duration='1000'>
             <Navbar fluid rounded className='bg-transparent'>
-                <Navbar.Brand href="https://flowbite-react.com">
+                <Navbar.Brand>
                     <span className="self-center whitespace-nowrap text-4xl font-semibold text-gray-200">GoLocal</span>
                 </Navbar.Brand>
                 <div className="flex md:order-2">

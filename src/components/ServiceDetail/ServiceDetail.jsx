@@ -66,7 +66,7 @@ const ServiceDetail = () => {
             <div className="bg-gradient-to-r from-[#151515] to-[rgba (21, 21, 21, 0)]">
                 <img src={serviceImage} alt="" className="h-[480px] w-full object-cover" />
                 <div className="absolute h-[480px] flex items-center left-0 top-0 bg-gradient-to-b w-full from-[#0000008d] to-[#00000067]">
-                    <div className='text-white md:w-3/4 mx-auto absolute top-72 md:left-28 left-8' data-aos="fade-right" data-aos-duration='1500'>
+                    <div className='text-white lg:w-1/2 mx-auto absolute md:top-48 md:left-28' data-aos="fade-right" data-aos-duration='1500'>
                         <Button data-aos="fade-right" data-aos-duration='1500' color="transparent" size='md' className="border mb-5" pill>{serviceArea}</Button>
                         <h2 className="lg:text-7xl text-6xl">{serviceName}</h2>
                     </div>
@@ -76,9 +76,9 @@ const ServiceDetail = () => {
                 <div className="flex items-center gap-4">
                     <h2 className="text-4xl font-bold border-l-8 border-green-600 pl-4">Service Overview</h2> <hr className="flex-grow border border-black" />
                 </div>
-                <section className="flex md:flex-row flex-col gap-6">
+                <section className="flex lg:flex-row flex-col gap-6">
                     <div className="flex-grow">
-                        <div className="bg-gray-100 grid grid-cols-2 gap-10 p-4 mt-8 w-full h-fit rounded-lg">
+                        <div className="bg-gray-100 grid md:grid-cols-2 gap-10 p-4 mt-8 w-full h-fit rounded-lg">
                             <div className="border-r-2 border-gray-300">
                                 <h2 className="text-2xl font-bold mb-2">Description</h2>
                                 <p className="text-gray-600">{serviceDescription}</p>
@@ -86,7 +86,7 @@ const ServiceDetail = () => {
                             <div className="ml-3">
                                 <h2 className="text-2xl font-bold mb-2">Provider</h2>
                                 <div className="flex items-center gap-2">
-                                    <img src={serviceProviderImage ? serviceProviderImage : '/resources/istockphoto-1341046662-612x612.jpg'} alt="" className="w-12 h-12 object-cover rounded-full" />
+                                    <img src={serviceProviderImage ? serviceProviderImage : 'https://i.ibb.co/7kgBp4r/istockphoto-1341046662-612x612.jpg'} alt="" className="w-12 h-12 object-cover rounded-full" />
                                     <p className="text-gray-600">{serviceProviderName}</p>
                                 </div>
                             </div>

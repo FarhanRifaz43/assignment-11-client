@@ -50,7 +50,7 @@ const AllServices = () => {
                 </div>
             </div>
             <h2 className="text-center mt-8 bg-gray-200 w-fit mx-auto px-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration='1400'><span className=" text-teal-700 font-bold text-xl">{count}</span> <span className="text-gray-600">Services Available</span></h2>
-            <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 md:w-[85vw] w-fit mx-auto mt-8">
+            <section className="grid lg:grid-cols-3 grid-cols-1 gap-8 lg:w-[85vw] w-fit mx-auto mt-8">
                 {
                     hiddenFiltered.map(service => <Service key={service._id} service={service}></Service>)
                 }
