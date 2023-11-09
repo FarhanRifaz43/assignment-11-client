@@ -1,8 +1,8 @@
-# React + Vite
+Features of this project:
+1. you can book services provided by other providers.
+2. you can add your own service.
+3. you can keep track of your bookings and also your pending services
+4. you can update or delete your service.
+5. you can search by service name.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+client side link: https://assignment-11-auth-8450a.web.app
