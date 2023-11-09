@@ -5,7 +5,7 @@ const ErrorPage = () => {
     return (
         <div>
             <div className="relative">
-                <div className="bg-black h-[650px]"></div>
+                <div className="bg-black h-[100vh]"></div>
                 <div className="h-[100vh] absolute top-0 w-full">
                     <h2 className="text-white text-9xl mt-60 w-fit mx-auto font-bold">404</h2>
                     <p className="text-white text-2xl w-fit mx-auto">Page Not Found</p>

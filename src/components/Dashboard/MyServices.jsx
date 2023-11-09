@@ -6,6 +6,15 @@ import Swal from "sweetalert2";
 
 const MyServices = () => {
 
+
+    useEffect(
+        () => {
+            document.title = 'GoLocal | My Services'
+        }
+    , [])
+
+
+
     const [myServices, setMyServices] = useState([]);
     const { user } = useContext(AuthContext);
     const url = `https://tour-service-server.vercel.app/my-services?email=${user.email}`;

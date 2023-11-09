@@ -1,10 +1,16 @@
 import { Button, TextInput } from 'flowbite-react';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { AuthContext } from '../../Auth/AuthProvider';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
 const AddService = () => {
+
+    useEffect(
+        () => {
+            document.title = 'GoLocal | Add Service'
+        }
+    , [])
 
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
