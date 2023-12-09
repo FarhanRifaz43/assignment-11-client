@@ -1,3 +1,6 @@
+This is a tour-service website project. </br>
+This project is made using React.js, Node.js, Mongodb, express, firebase, tailwind.
+
 Features of this project:
 1. you can book services provided by other providers.
 2. you can add your own service.
